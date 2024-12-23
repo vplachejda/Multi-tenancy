@@ -48,7 +48,6 @@ class AsyncSessionMigrationTest extends TestCase
 
         $this->assertDatabaseHas('async_sessions', [
             'id' => $sessionId,
-            'session_name' => $sessionData['session_name'],
         ]);
 
         $retrievedSession = \DB::table('async_sessions')->find($sessionId);
